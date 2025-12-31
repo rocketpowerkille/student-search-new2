@@ -8,9 +8,9 @@ export default function App({ Component, pageProps }: AppProps) {
   	<>
     <Head>
       	<title>Student Search | IITK</title>
-      	<link rel="icon" type="image/png" sizes="32x32" href="/icons/32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/icons/16x16.png" />
-		<link rel="manifest" href="/manifest.json" />
+      	<link rel="icon" type="image/png" sizes="32x32" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icons/32x32.png`} />
+		<link rel="icon" type="image/png" sizes="16x16" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icons/16x16.png`} />
+		<link rel="manifest" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/manifest.json`} />
 	</Head>
   <StyledEngineProvider injectFirst>
   	<Component {...pageProps} />
